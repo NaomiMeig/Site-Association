@@ -1,0 +1,43 @@
+ /*{/* BLOC SUPERPOSÉ */}
+        <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[80%] bg-white rounded-2xl shadow-xl p-6 md:p-10 z-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-700 text-center mb-6">Prochain événement</h2>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+            {/* IMAGE + TEXTE */}
+            <div className="max-w-md text-center md:text-left">
+            <img
+             src="/event.jpg"
+             alt="Événement à venir"
+             className="rounded-lg shadow-md w-full h-56 object-cover mb-4"
+            />
+            <p className="text-gray-700 text-base md:text-lg">
+                Rejoignez-nous pour notre événement annuel où jeunes et acteurs associatifs se rassemblent
+                pour discuter, partager et construire ensemble un avenir meilleur. Ateliers, débats, musique,
+                et bien plus encore vous attendent.
+            </p>
+            </div>
+            {/* COMPTE À REBOURS */}
+            {timeLeft.days !== undefined ? (
+              <div className="flex gap-4 text-lg md:text-2xl font-semibold text-gray-700">
+                <div className="text-center">
+                  <span className="block text-3xl md:text-4xl text-blue-600">{timeLeft.days}</span>
+                  <span>Jours</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-3xl md:text-4xl text-blue-600">{timeLeft.hours}</span>
+                  <span>Heures</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-3xl md:text-4xl text-blue-600">{timeLeft.minutes}</span>
+                  <span>Min</span>
+                </div>
+                <div className="text-center">
+                  <span className="block text-3xl md:text-4xl text-blue-600">{timeLeft.seconds}</span>
+                  <span>Sec</span>
+                </div>
+              </div>
+            ) : (
+              <p className="text-gray-500 text-lg">L’événement a commencé !</p>
+            )}
+          </div>
+        </div>
