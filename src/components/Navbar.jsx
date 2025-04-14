@@ -20,7 +20,7 @@ export default function Navbar() {
         </div>
 
         {/* Liens de navigation */}
-        <div className={`md:flex space-x-6 h-5 display-flexjustify-center text-center ${isOpen ? 'block mt-4 md:mt-0 ' : 'hidden'} md:block`}>
+        <div className={`md:flex space-x-8 h-5 display-flexjustify-center text-center ${isOpen ? 'block mt-4 md:mt-0 ' : 'hidden'} md:block`}>
           <Link to="/" className="block text-gray-700 hover:text-cyan-300 border-b-cyan-300 bb-10px">Home</Link>
           <Link to="/about" className="block text-gray-700 hover:text-cyan-300 ">About</Link>
           <Link to="/events" className="block text-gray-700 hover:text-cyan-300 ">Events</Link>
