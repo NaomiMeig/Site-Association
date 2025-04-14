@@ -10,7 +10,7 @@ import Blog from './pages/Blog'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 font-roboto">
+      <div className="min-h-screen bg-gray-50 font-roboto ">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +26,3 @@ function App() {
 }
 
 export default App
-
-
-
