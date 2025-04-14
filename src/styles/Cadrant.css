@@ -93,3 +93,20 @@
         justify-content: space-around;
     }
 }
+/* Style pour le dernier div contenant le paragraphe */
+.tirth-cadrant > div:last-of-type {
+    
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #4ca3af; /* Bordure verte à gauche pour un effet accentué */
+}
+
+.tirth-cadrant p {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 2rem;
+    text-align: justify;
+}

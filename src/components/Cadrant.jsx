@@ -16,13 +16,13 @@ function Cadrant (){
                 <li> 0 </li>
                 <li> 0 </li>
                 <li> 0 </li>
-                <li> 0 </li> <span>Remaining</span>
+                <li> 0 </li>
             </div>
             <br/>
             
             <div> 
                 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Deserunt eaque unde, nihil vero libero, adipisci repellat veritatis vel 
                     voluptas temporibus rerum laboriosam, modi est! Tenetur, dolore ratione! Dolores, neque iure!</p>
             </div>
