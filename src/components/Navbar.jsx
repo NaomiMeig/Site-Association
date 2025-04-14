@@ -20,6 +20,19 @@ export default function Navbar() {
         </div>
 
         {/* Liens de navigation */}
+        <div className={`md:flex space-x-6 h-5 display-flexjustify-center text-center ${isOpen ? 'block mt-4 md:mt-0 ' : 'hidden'} md:block`}>
+          <Link to="/" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+          hover:border-cyan-300 transition-colors duration-700 pb-10">Home</Link>
+          <Link to="/about" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+          hover:border-cyan-300 transition-colors duration-700 pb-10">About</Link>
+          <Link to="/events" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+          hover:border-cyan-300 transition-colors duration-700 pb-10">Events</Link>
+          <Link to="/gallery" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+          hover:border-cyan-300 transition-colors duration-700 pb-10">Gallery</Link>
+          <Link to="/contact" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+          hover:border-cyan-300 transition-colors duration-700 pb-10">Contact Us</Link>
+          <Link to="/blog" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+          hover:border-cyan-300 transition-colors duration-700 pb-10">Blog</Link>
         <div className={`md:flex space-x-8 h-5 display-flexjustify-center text-center ${isOpen ? 'block mt-4 md:mt-0 ' : 'hidden'} md:block`}>
           <Link to="/" className="block text-gray-700 hover:text-cyan-300 border-b-cyan-300 bb-10px">Home</Link>
           <Link to="/about" className="block text-gray-700 hover:text-cyan-300 ">About</Link>
@@ -30,7 +43,7 @@ export default function Navbar() {
           
         </div>
         <div className="">
-        <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl'>Get started</button>
+        <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500'>Get started</button>
         </div>
       </div>
     </nav>
