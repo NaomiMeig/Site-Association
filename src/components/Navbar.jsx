@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo de l’association */}
         <div className="flex items-center space-x-2 h-9">
-          <img src="/aqj.png" alt="Logo" className="h-30 w-auto" />
+          <img src="src/assets/aqj.png" alt="Logo" className="h-30 w-auto" />
         </div>
 
         {/* Bouton burger menu mobile */}
@@ -20,7 +20,7 @@ export default function Navbar() {
         </div>
 
         {/* Liens de navigation */}
-        <div className={`md:flex space-x-6 h-5 display-flexjustify-center text-center ${isOpen ? 'block mt-4 md:mt-0 ' : 'hidden'} md:block`}>
+        <div className={`md:flex space-x-6 h-5 display-flex item-center justify-center text-center ${isOpen ? 'block mt-4 md:mt-0 ' : 'hidden'} md:block`}>
           <Link to="/" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
           hover:border-cyan-300 transition-colors duration-700 pb-10">Home</Link>
           <Link to="/about" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 

@@ -3,13 +3,15 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Arrierre from '../components/Arrierre'
-import Cadrant from '../components/Cadrant'
+import Element2 from '../components/Element2'
 
 const images = [
   '/src/assets/img1.jpeg',
   '/src/assets/img2.jpeg',
   '/src/assets/img3.jpeg',
-  '/src/assets/img4.jpeg',
+  '/src/assets/forum4.jpeg',
+  '/src/assets/forum2.jpeg',
+  '/src/assets/forum7.jpeg',
 ]
 
 export default function Home() {
@@ -84,7 +86,7 @@ export default function Home() {
         <Arrierre />
         
        </div>
-       
+        <div> <Element2 /></div>  
       </div>
     </>
   )
