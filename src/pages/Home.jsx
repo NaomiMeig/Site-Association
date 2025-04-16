@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Arrierre from '../components/Arrierre'
 import Element2 from '../components/Element2'
+import Compartiment from '../components/Compartiment/Compartiment'
 
 const images = [
   '/src/assets/img1.jpeg',
@@ -87,6 +88,7 @@ export default function Home() {
         
        </div>
         <div> <Element2 /></div>  
+        <div><Compartiment/> </div>
       </div>
     </>
   )
