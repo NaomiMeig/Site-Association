@@ -7,7 +7,7 @@ function Detail (){
         <h2 className="text-2xl sticky font-bold">Association Qualification des Jeunes</h2>
         <br/>
         <p className='duration-500'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
             A, quaerat dolor placeat eveniet consectetur inventore nihil eum 
              quas hic cum illum. Ipsam, ad est! Aliquid harum omnis minima soluta!</p>
         <p className='duration-500'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -18,3 +18,6 @@ function Detail (){
     </div>
 }
 export default Detail
+
+
+
