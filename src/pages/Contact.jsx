@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
-      <div className="p-6 max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold text-blue-700">Contactez-nous</h2>
+      <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl ">
+        <h2 className="text-2xl font-bold text-cyan-300">Contactez-nous</h2>
         <p className="mt-2 text-gray-600 mb-4">
           Une question ? Une proposition ? Écrivez-nous ici !
         </p>
@@ -23,7 +23,7 @@ export default function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+            className="bg-cyan-300 text-white px-6 py-2 rounded hover:bg-blue-700"
           >
             Envoyer
           </button>

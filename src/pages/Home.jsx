@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick-theme.css"
 import Arrierre from '../components/Arrierre'
 import Element2 from '../components/Element2'
 import Compartiment from '../components/Compartiment/Compartiment'
+import Stats from '../components/BarStats/Stats'
+import Contact from './Contact'
+import Footer from '../components/footer/Footer'
 
 const images = [
   '/src/assets/img1.jpeg',
@@ -82,14 +85,15 @@ export default function Home() {
           ))}
         </Slider>
           
-       <div>
-       
-        <Arrierre />
-        
-       </div>
+       <div><Arrierre /></div> <br />
+       <div><Stats/></div>
         <div> <Element2 /></div>  
-        <div><Compartiment/> </div>
+        <div><Compartiment/> </div> 
+       
+        <div className="bg-gray-800 "><Contact/></div>
+        <footer className='bg-black'> <Footer/></footer>
       </div>
+
     </>
   )
 }

@@ -5,12 +5,12 @@ function Compartiment() {
         color : "#2de6ff",
         marginLeft : "9%",
         paddingTop: "5%",
-        height : "50px",
+        height : "70px",
         fontWeight: "800",
         fontSize : "40px"
     }
 
-    return <div className="bg-black mt-20 h-150">
+    return <div className="bg-black mt-20 h-200">
         <h1 style={style}>Our partners</h1> <br /><br /><br /><br /><br />
         <Bloc1 /><br /><br /><br /><br />
         <p style={{color : "#2de6ff" ,maxWidth : "1000px" , width:"40%", marginLeft : "9%",fontWeight: "600"}}>
