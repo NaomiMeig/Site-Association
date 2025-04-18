@@ -3,7 +3,7 @@ import '../styles/Cadrant.css'
 
 function Cadrant() {
   const [timeLeft, setTimeLeft] = useState({})
-  const eventDate = new Date("2025-05-01T10:00:00")
+  const eventDate = new Date("2025-04-17T15:50:00")
 
   useEffect(() => {
     const interval = setInterval(() => {
