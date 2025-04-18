@@ -4,6 +4,10 @@
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
-    padding-top: 60px; /* Centrage horizontal */
+    padding-top: 170px; /* Centrage horizontal */
     width: 15%;
+
+}
+.second-footer{
+    display: flex;
 }
