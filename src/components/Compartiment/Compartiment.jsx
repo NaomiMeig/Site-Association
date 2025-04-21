@@ -37,7 +37,7 @@ function Compartiment() {
     return (
         <div className="bg-black pt-20 pb-20">
             <h1 className="text-cyan-300 ml-[9%] pt-[5%] h-[70px] font-extrabold text-4xl">
-                Our partners
+                Our Members
             </h1>
 
             <div className="flex flex-wrap md:flex-nowrap gap-8 mt-12 ml-[9%] mr-[9%]">

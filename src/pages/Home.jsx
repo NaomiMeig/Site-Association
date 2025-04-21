@@ -96,7 +96,7 @@ export default function Home() {
           <Partenaire />
         </div>
         <div><Compartiment/> </div> 
-        <div className="bg-gray-800 "><Contact/></div>
+        <div className="bg-black "><Contact/></div>
         <footer className='bg-black'> <Footer/></footer>
       </div>
 
