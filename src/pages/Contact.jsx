@@ -1,6 +1,9 @@
+
+
 export default function Contact() {
     return (
-      <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl ">
+      <div className="box">
+        <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl ">
         <h2 className="text-2xl font-bold text-cyan-300">Contactez-nous</h2>
         <p className="mt-2 text-gray-600 mb-4">
           Une question ? Une proposition ? Écrivez-nous ici !
@@ -28,6 +31,7 @@ export default function Contact() {
             Envoyer
           </button>
         </form>
+      </div>
       </div>
     )
   }

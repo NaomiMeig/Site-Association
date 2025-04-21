@@ -8,6 +8,8 @@ import Compartiment from '../components/Compartiment/Compartiment'
 import Stats from '../components/BarStats/Stats'
 import Contact from './Contact'
 import Footer from '../components/footer/Footer'
+import Partenaire from '../components/Partner/Partenaire'
+
 
 const images = [
   '/src/assets/img1.jpeg',
@@ -32,7 +34,7 @@ export default function Home() {
     fade: true,
   }
 
-  const eventDate = new Date("2025-06-01T10:00:00")
+  const eventDate = new Date("2024-01-01T10:00:00")
   const [timeLeft, setTimeLeft] = useState({})
 
   useEffect(() => {
@@ -76,7 +78,7 @@ export default function Home() {
                     convergence des différents jeunes de la ville de Béni-Mellal, sur laquelle; on a 
                     pu développer une approche participative basée sur un travail rapproché, en assurant la 
                     mobilisation des multiples parties impliquées dans la gestion des affaires et des questions 
-                    liées aux jeunes</p>
+                    liées aux jeunes</p>
                     <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500 mt-[50px] '>Read more</button>
                 </div>
                 
@@ -88,8 +90,12 @@ export default function Home() {
        <div><Arrierre /></div> <br />
        <div><Stats/></div>
         <div> <Element2 /></div>  
+<br /><br /><br /><br />
+        <h1 className='text-cyan-300 text-5xl font-black text-center w-full mb-8 '>NOS PARTENAIRES</h1>
+        <div className="w-full">
+          <Partenaire />
+        </div>
         <div><Compartiment/> </div> 
-       
         <div className="bg-gray-800 "><Contact/></div>
         <footer className='bg-black'> <Footer/></footer>
       </div>
