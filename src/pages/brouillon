@@ -476,3 +476,46 @@ export default function Contact() {
 
     )
   }
+
+
+
+  .child-image{
+    position: relative; /* Nécessaire pour le positionnement absolu des enfants */
+    width: 70%;
+}
+.child-image1 {
+    border-radius: 25px;
+    width : 90%; 
+    height: auto;
+    border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
+
+}
+.child-image2 {
+    position : absolute;
+    top: 0; 
+    left: 0;
+    border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
+    border-radius: 25px;
+    margin: 130px;
+    width : 80%;
+    /* padding-top : 110px ;  */
+    /* padding-left : 110px ;  */
+    /* width: 150%; */
+    height: auto;
+}
+.child-image3{
+    position : absolute;
+    top: 0; 
+    left: 0;
+    border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
+    border-radius: 25px;
+    margin: 250px;
+    width : 80%;
+    margin-top : 300px;
+    /* padding-top : 110px ;  */
+    /* padding-left : 110px ;  */
+    /* width: 150%; */
+    height: auto;
+}
+
+  
