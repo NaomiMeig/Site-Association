@@ -6,7 +6,7 @@
     border-bottom: 3px solid white;
 }
 .bloc-footer img{
-    width : 15%;
+    width : 25%;
     padding-bottom : 15px; 
     justify-content: center;
     align-items: center;
@@ -14,6 +14,6 @@
 }
 .bloc-footer img:hover{
     transition: all 0.4s ease;
-    width:16%;
+    width:30%;
     transform: scale(1.2);
 }

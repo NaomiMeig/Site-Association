@@ -33,7 +33,7 @@ export default function Home() {
     pauseOnHover: false,
     fade: true,
   }
-
+  
   const eventDate = new Date("2024-01-01T10:00:00")
   const [timeLeft, setTimeLeft] = useState({})
 
@@ -95,6 +95,7 @@ export default function Home() {
         <div className="w-full">
           <Partenaire />
         </div>
+        <br /><br /><br /><br />
         <div><Compartiment/> </div> 
         <div className="bg-gray-800 "><Contact/></div>
         <footer className='bg-black'> <Footer/></footer>
