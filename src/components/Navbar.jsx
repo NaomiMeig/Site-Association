@@ -11,6 +11,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2 h-9">
           <img src="src/assets/aqj.png" alt="Logo" className="h-30 w-auto" />
         </div>
+        <span className='text-2xl text-cyan-300 font-bold m-0 text-center pl-0 mt- pr- m-0'> <span className='text-center'>Association</span>  Qualification des jeunes </span>
 
         {/* Bouton burger menu mobile */}
         <div className="md:hidden">

@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import '../../styles/partenaire.css';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Partenaire() {
   const logos = Array.from({ length: 22 }, (_, i) => i + 1);
@@ -8,6 +10,11 @@ function Partenaire() {
   const speed = 0.5;
   const latency = 30;
 
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   useEffect(() => {
     let progress = 0;
     let lastTime = null;
@@ -35,7 +42,13 @@ function Partenaire() {
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
 
-  return (
+  return (<motion.div
+    ref={ref}
+    initial={{ opacity: 0, y: 100 }}
+    animate={inView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="box"> 
+    <h1 className='text-cyan-300 text-5xl font-black text-center w-full mb-8 '>NOS PARTENAIRES</h1>
     <div className="carroussel-immersif">
       <div className="carroussel-track" ref={trackRef}>
         {[...logos, ...logos].map((logoNum, index) => ( 
@@ -56,6 +69,7 @@ function Partenaire() {
       <div className="carroussel-gradient-left"></div>
       <div className="carroussel-gradient-right"></div>
     </div>
+  </motion.div>
   );
 }
 

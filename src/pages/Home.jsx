@@ -9,6 +9,8 @@ import Stats from '../components/BarStats/Stats'
 import Contact from './Contact'
 import Footer from '../components/footer/Footer'
 import Partenaire from '../components/Partner/Partenaire'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 const images = [
@@ -21,6 +23,11 @@ const images = [
 ]
 
 export default function Home() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   const settings = {
     autoplay: true,
     infinite: true,
@@ -33,7 +40,7 @@ export default function Home() {
     pauseOnHover: false,
     fade: true,
   }
-  
+
   const eventDate = new Date("2024-01-01T10:00:00")
   const [timeLeft, setTimeLeft] = useState({})
 
@@ -59,7 +66,14 @@ export default function Home() {
   }, [])
 
   return (
-    <>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="box">
+
+
       {/* SLIDER */}
       <div className="relative h-[100vh]">
         <Slider {...settings} className="h-full">
@@ -91,16 +105,19 @@ export default function Home() {
        <div><Stats/></div>
         <div> <Element2 /></div>  
 <br /><br /><br /><br />
-        <h1 className='text-cyan-300 text-5xl font-black text-center w-full mb-8 '>NOS PARTENAIRES</h1>
+        
         <div className="w-full">
           <Partenaire />
         </div>
         <br /><br /><br /><br />
         <div><Compartiment/> </div> 
+        <div className='bg-black'>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
         <div className="bg-black "><Contact/></div>
         <footer className='bg-black'> <Footer/></footer>
       </div>
 
-    </>
+    </motion.div>
   )
 }

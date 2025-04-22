@@ -1,6 +1,13 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Compartiment() {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+      });
+
     const [choix, setChoix] = useState(null);
 
     const equipes = [
@@ -34,7 +41,12 @@ function Compartiment() {
         setChoix(partenaire);
     }
 
-    return (
+    return (<motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 100 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="box"> 
         <div className="bg-black pt-20 pb-20">
             <h1 className="text-cyan-300 ml-[9%] pt-[5%] h-[70px] font-extrabold text-4xl">
                 Our Members
@@ -96,6 +108,7 @@ function Compartiment() {
                 </div>
             </div>
         </div>
+        </motion.div>
     );
 }
 

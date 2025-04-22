@@ -3,14 +3,6 @@ import "../../../styles/BottomFooter.css"
 function BottomFooter(){
 
     return <div className="bloc-footer">
-        <div > 
-            <h1 className="text-white text-2xl md:text-3xl font-bold mb-25">Our Social Media</h1><br/>
-            <img src="src/assets/youtube.png" alt="YouTube" className="youtube-icon" />
-                    <img src="src/assets/instragram.png" alt="Instagram" className="instagram-icon" />
-                    <img src="src/assets/X.png" alt="X (Twitter)" className="x-icon" />
-                    <img src="src/assets/likedin.png" alt="LinkedIn" className="linkedin-icon" />
-                    <img src="src/assets/facebbok.png" alt="Facebook" className="facebook-icon" />
-        </div>
         <div>
         <h1 className="text-cyan-300 text-3xl  font-bold mb-25">COMPANY</h1><br/>
         <p className="text-gray-400 text-2xl mb-9 justify-center ml-5">About</p>

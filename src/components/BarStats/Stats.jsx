@@ -2,9 +2,20 @@ import React from 'react';
 import '../../styles/Stats.css';
 import Counter from './Counter'
 import { FaUsers, FaImage, FaCalendarAlt, FaHandshake } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Stats() {
-  return (
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  return (<motion.div
+    ref={ref}
+    initial={{ opacity: 0, y: 100 }}
+    animate={inView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="box"> 
     <section className="social-proof">
       <div className="proof-container">
         <div className="proof-item">
@@ -29,6 +40,7 @@ export default function Stats() {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 }
 
