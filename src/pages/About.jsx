@@ -1,4 +1,9 @@
+import { useState } from "react"
+
 export default function About() {
+
+
+  const [isOpen , setIsOpen] = useState(true)
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-blue-500 mb-8 text-center">Association Qualification des Jeunes (AQJ)</h1>
@@ -66,19 +71,23 @@ export default function About() {
           </div>
 
           <h2 className="text-2xl font-semibold text-blue-700 mb-4">Actions Réalisées</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700">
-            <li className="bg-white p-3 rounded shadow-sm">Programmes sur les politiques publiques jeunesse</li>
-            <li className="bg-white p-3 rounded shadow-sm">Formations pour l'inclusion économique</li>
-            <li className="bg-white p-3 rounded shadow-sm">Programmes d'autonomisation des jeunes</li>
-            <li className="bg-white p-3 rounded shadow-sm">Initiatives jeunesse et migration</li>
-            <li className="bg-white p-3 rounded shadow-sm">Leadership féminin</li>
-            <li className="bg-white p-3 rounded shadow-sm">Ateliers et formations</li>
-            <li className="bg-white p-3 rounded shadow-sm">Débats et forums</li>
-            <li className="bg-white p-3 rounded shadow-sm">Campagnes de sensibilisation</li>
-            <li className="bg-white p-3 rounded shadow-sm">Échanges culturels</li>
-            <li className="bg-white p-3 rounded shadow-sm">Publications audiovisuelles</li>
-          </ul>
-        </div>
+          <button onClick={()=> setIsOpen(!isOpen)}
+           className="bg-blue-600  text-white p-3 pl-6 pr-6 rounded-2xl hover:bg-blue-600 duration-500 "> 
+           {isOpen ? 'Fermer' : 'Afficher'} 
+           </button> <br /><br />
+            {isOpen ? (<ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 duration-500 ">
+  <li className="bg-white p-3 rounded shadow-sm">Programmes sur les politiques publiques jeunesse</li>
+  <li className="bg-white p-3 rounded shadow-sm">Formations pour l'inclusion économique</li>
+  <li className="bg-white p-3 rounded shadow-sm">Programmes d'autonomisation des jeunes</li>
+  <li className="bg-white p-3 rounded shadow-sm">Initiatives jeunesse et migration</li>
+  <li className="bg-white p-3 rounded shadow-sm">Leadership féminin</li>
+  <li className="bg-white p-3 rounded shadow-sm">Ateliers et formations</li>
+  <li className="bg-white p-3 rounded shadow-sm">Débats et forums</li>
+  <li className="bg-white p-3 rounded shadow-sm">Campagnes de sensibilisation</li>
+  <li className="bg-white p-3 rounded shadow-sm">Échanges culturels</li>
+  <li className="bg-white p-3 rounded shadow-sm">Publications audiovisuelles</li>
+</ul>) : null }
+        </div> 
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-10">
