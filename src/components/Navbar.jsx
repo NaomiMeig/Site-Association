@@ -8,10 +8,13 @@ export default function Navbar() {
     <nav className="bg-white shadow-md sticky top-0 z-50 h-30">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo de l’association */}
-        <div className="flex items-center space-x-2 h-9">
-          <img src="src/assets/aqj.png" alt="Logo" className="h-30 w-auto" />
-        </div>
-        <span className='text-2xl text-cyan-300 font-bold m-0 text-center pl-0 mt- pr- m-0'> <span className='text-center'>Association</span>  Qualification des jeunes </span>
+       <div className="flex items-center">
+         <img src="src/assets/aqj.png" alt="Logo" className="h-25 w-auto mr-2" />
+         <span className="text-2xl text-cyan-300 font-bold flex flex-col leading-tight">
+         <span>Association</span>
+         <span>Qualification des jeunes</span>
+         </span>
+       </div>
 
         {/* Bouton burger menu mobile */}
         <div className="md:hidden">
@@ -34,10 +37,10 @@ export default function Navbar() {
           hover:border-cyan-300 transition-colors duration-700 pb-10">Contact Us</Link>
           <Link to="/blog" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
           hover:border-cyan-300 transition-colors duration-700 pb-10">Blog</Link>
-        <div className="">
+      </div>
+      <div className="">
         <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500'>Get started</button>
         </div>
-      </div>
       </div>
     </nav>
   )

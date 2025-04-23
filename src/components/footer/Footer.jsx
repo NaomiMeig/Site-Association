@@ -21,7 +21,7 @@ function Footer(){
     </div>
     <div className="flex items-center justify-center gap-30 p-15">
  
-  <a href="https://www.instagram.com/">
+  <a href="https://www.instagram.com/aqj__bm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
   <img 
     src="src/assets/instagram.png" 
     alt="Instagram" 
@@ -40,7 +40,7 @@ function Footer(){
     alt="LinkedIn" 
     className="w-8 h-8 hover:scale-110 transition-transform" 
   /></a>
-  <a href="https://www.facebook.com/">
+  <a href="https://www.facebook.com/AQJ.BM/">
   <img 
     src="src/assets/communication.png" 
     alt="Facebook" 

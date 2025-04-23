@@ -392,130 +392,130 @@
 
 
 
-<div className="box">
-        <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl ">
-        <h2 className="text-2xl font-bold text-cyan-300">Contactez-nous</h2>
-        <p className="mt-2 text-gray-600 mb-4">
-          Une question ? Une proposition ? Écrivez-nous ici !
-        </p>
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Nom"
-            className="w-full border border-gray-300 px-4 py-2 rounded-md"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full border border-gray-300 px-4 py-2 rounded-md"
-          />
-          <textarea
-            placeholder="Votre message"
-            rows="4"
-            className="w-full border border-gray-300 px-4 py-2 rounded-md"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-cyan-300 text-white px-6 py-2 rounded hover:bg-blue-700"
-          >
-            Envoyer
-          </button>
-        </form>
-      </div>
-      </div>
+// <div className="box">
+//         <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl ">
+//         <h2 className="text-2xl font-bold text-cyan-300">Contactez-nous</h2>
+//         <p className="mt-2 text-gray-600 mb-4">
+//           Une question ? Une proposition ? Écrivez-nous ici !
+//         </p>
+//         <form className="space-y-4">
+//           <input
+//             type="text"
+//             placeholder="Nom"
+//             className="w-full border border-gray-300 px-4 py-2 rounded-md"
+//           />
+//           <input
+//             type="email"
+//             placeholder="Email"
+//             className="w-full border border-gray-300 px-4 py-2 rounded-md"
+//           />
+//           <textarea
+//             placeholder="Votre message"
+//             rows="4"
+//             className="w-full border border-gray-300 px-4 py-2 rounded-md"
+//           ></textarea>
+//           <button
+//             type="submit"
+//             className="bg-cyan-300 text-white px-6 py-2 rounded hover:bg-blue-700"
+//           >
+//             Envoyer
+//           </button>
+//         </form>
+//       </div>
+//       </div>
 
       
 
-export default function Contact() {
-    return (
-      <div className="box">
-  <div className="p-8 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-200">
-    <h2 className="text-3xl font-bold text-cyan-300 mb-2">Contactez-nous</h2>
-    <p className="text-gray-500 mb-6">
-      Une question ? Une proposition ? Écrivez-nous ici, nous vous répondrons rapidement !
-    </p>
-    <form className="space-y-5">
-      <input
-        type="text"
-        placeholder="Votre nom"
-        className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
-      />
-      <input
-        type="email"
-        placeholder="Votre email"
-        className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
-      />
-      <textarea
-        placeholder="Votre message"
-        rows="4"
-        className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
-      ></textarea>
-      <button
-        type="submit"
-        className="flex items-center justify-center gap-2 bg-cyan-300 text-white px-6 py-3 rounded-lg hover:bg-cyan-500 transition-colors duration-300 shadow-md hover:shadow-lg"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-        Envoyer
-      </button>
-    </form>
-  </div>
-</div>
+// export default function Contact() {
+//     return (
+//       <div className="box">
+//   <div className="p-8 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-200">
+//     <h2 className="text-3xl font-bold text-cyan-300 mb-2">Contactez-nous</h2>
+//     <p className="text-gray-500 mb-6">
+//       Une question ? Une proposition ? Écrivez-nous ici, nous vous répondrons rapidement !
+//     </p>
+//     <form className="space-y-5">
+//       <input
+//         type="text"
+//         placeholder="Votre nom"
+//         className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
+//       />
+//       <input
+//         type="email"
+//         placeholder="Votre email"
+//         className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
+//       />
+//       <textarea
+//         placeholder="Votre message"
+//         rows="4"
+//         className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
+//       ></textarea>
+//       <button
+//         type="submit"
+//         className="flex items-center justify-center gap-2 bg-cyan-300 text-white px-6 py-3 rounded-lg hover:bg-cyan-500 transition-colors duration-300 shadow-md hover:shadow-lg"
+//       >
+//         <svg
+//           xmlns="http://www.w3.org/2000/svg"
+//           className="h-5 w-5"
+//           fill="none"
+//           viewBox="0 0 24 24"
+//           stroke="currentColor"
+//         >
+//           <path
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             strokeWidth={2}
+//             d="M14 5l7 7m0 0l-7 7m7-7H3"
+//           />
+//         </svg>
+//         Envoyer
+//       </button>
+//     </form>
+//   </div>
+// </div>
 
-    )
-  }
+//     )
+//   }
 
 
 
-  .child-image{
-    position: relative; /* Nécessaire pour le positionnement absolu des enfants */
-    width: 70%;
-}
-.child-image1 {
-    border-radius: 25px;
-    width : 90%; 
-    height: auto;
-    border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
+//   .child-image{
+//     position: relative; /* Nécessaire pour le positionnement absolu des enfants */
+//     width: 70%;
+// }
+// .child-image1 {
+//     border-radius: 25px;
+//     width : 90%; 
+//     height: auto;
+//     border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
 
-}
-.child-image2 {
-    position : absolute;
-    top: 0; 
-    left: 0;
-    border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
-    border-radius: 25px;
-    margin: 130px;
-    width : 80%;
-    /* padding-top : 110px ;  */
-    /* padding-left : 110px ;  */
-    /* width: 150%; */
-    height: auto;
-}
-.child-image3{
-    position : absolute;
-    top: 0; 
-    left: 0;
-    border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
-    border-radius: 25px;
-    margin: 250px;
-    width : 80%;
-    margin-top : 300px;
-    /* padding-top : 110px ;  */
-    /* padding-left : 110px ;  */
-    /* width: 150%; */
-    height: auto;
-}
+// }
+// .child-image2 {
+//     position : absolute;
+//     top: 0; 
+//     left: 0;
+//     border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
+//     border-radius: 25px;
+//     margin: 130px;
+//     width : 80%;
+//     /* padding-top : 110px ;  */
+//     /* padding-left : 110px ;  */
+//     /* width: 150%; */
+//     height: auto;
+// }
+// .child-image3{
+//     position : absolute;
+//     top: 0; 
+//     left: 0;
+//     border: 2px solid rgb(230, 225, 225); /*Ajoutez une bordure si besoin*/
+//     border-radius: 25px;
+//     margin: 250px;
+//     width : 80%;
+//     margin-top : 300px;
+//     /* padding-top : 110px ;  */
+//     /* padding-left : 110px ;  */
+//     /* width: 150%; */
+//     height: auto;
+// }
 
   
