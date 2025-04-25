@@ -5,9 +5,11 @@ import About from './pages/About'
 import Events from './pages/Events'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
-import Blog from './pages/Blog'
+import ActionsRealisees from './pages/ActionRealisees'
+
 
 function App() {
+  
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 font-roboto ">
@@ -18,7 +20,8 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="ActionsRealisees" element={<ActionsRealisees/>}/>
+          {/* <Route path="/ActionsRealisee" element={<ActionRealisee/>} /> */}
         </Routes>
       </div>
     </Router>

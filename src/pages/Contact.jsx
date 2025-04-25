@@ -25,17 +25,17 @@ export default function Contact() {
             type="text"
             placeholder="Votre nom"
             className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
-          />
+          required/>
           <input
             type="email"
             placeholder="Votre email"
             className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
-          />
+            required/>
           <textarea
             placeholder="Votre message"
             rows="4"
             className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300 transition-all duration-300"
-          ></textarea>
+            required></textarea>
           <button
             type="submit"
             className="flex items-center justify-center gap-2 bg-cyan-300 text-white px-6 py-3 rounded-lg hover:bg-cyan-500 transition-colors duration-300 shadow-md hover:shadow-lg"
