@@ -9,10 +9,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo de l’association */}
        <div className="flex items-center">
-         <img src="src/assets/aqj.png" alt="Logo" className="h-25 w-auto mr-2" />
-         <span className="text-2xl text-cyan-300 font-bold flex flex-col leading-tight">
-         <span>Association</span>
-         <span>Qualification des jeunes</span>
+         <img src="src/assets/aqj.png" alt="Logo" className="h-26 w-auto mr-2" />
+         <span className="text-xl flex flex-col leading-tight">
+         <span className='text-blue-600'>جمعية تأهيل الشباب</span>
+         <span className='text-cyan-300 '>ⵜⴰⵎⵙⵎⵓⵏⵜ ⵓⵙⵖⵔⵜ ⵏ ⵜⵉⵄⵄⵓⵔⵎⴰ</span>
+         <span className='text-blue-600'>Association Qualification des jeunes</span>
          </span>
        </div>
 
@@ -35,8 +36,8 @@ export default function Navbar() {
           hover:border-cyan-300 transition-colors duration-700 pb-10">Gallery</Link>
           <Link to="/contact" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
           hover:border-cyan-300 transition-colors duration-700 pb-10">Contact Us</Link>
-          <Link to="/blog" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
-          hover:border-cyan-300 transition-colors duration-700 pb-10">Blog</Link>
+          <Link to="/ActionsRealisees" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent
+          hover:border-cyan-300 transition-colors duration-700 pb-10"> Actions Réalisées</Link>
       </div>
       <div className="">
         <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500'>Get started</button>

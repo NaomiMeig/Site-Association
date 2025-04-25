@@ -68,23 +68,7 @@
   transition: all 0.3s ease;
 }
 
-.logo-card:hover {
-  transform: translateY(-10px) scale(1.05);
-}
 
-.logo-card:hover .logo-img {
-  filter: grayscale(0%) contrast(1.2) brightness(1.1);
-  box-shadow: 0 15px 30px rgba(0, 180, 255, 0.4);
-}
-
-.logo-card:hover .logo-hover-effect {
-  opacity: 1;
-}
-
-.logo-card:hover .logo-reflection {
-  opacity: 0.6;
-  height: 30%;
-}
 
 .carroussel-gradient-left,
 .carroussel-gradient-right {

@@ -1,5 +1,7 @@
 import '../../../styles/Illustration.css';
 
+
+
 function Bloc1() {
     return (
         <div className="bloc-container">

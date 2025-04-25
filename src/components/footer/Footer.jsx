@@ -28,6 +28,20 @@ function Footer(){
     className="w-8 h-8 hover:scale-110 transition-transform" 
   />
   </a>
+  <a href="https://www.facebook.com/AQJ.BM/">
+  <img 
+    src="src/assets/communication.png" 
+    alt="Facebook" 
+    className="w-8 h-8 hover:scale-110 transition-transform" 
+  />
+  </a>
+  <a href="https://www.youtube.com/@AQJ-BM">
+  <img 
+    src="src/assets/youtube.png" 
+    alt="Facebook" 
+    className="w-8 h-8 hover:scale-110 transition-transform" 
+  />
+  </a>
   <a href="https://x.com/">
   <img 
     src="src/assets/twitter.png" 
@@ -40,13 +54,6 @@ function Footer(){
     alt="LinkedIn" 
     className="w-8 h-8 hover:scale-110 transition-transform" 
   /></a>
-  <a href="https://www.facebook.com/AQJ.BM/">
-  <img 
-    src="src/assets/communication.png" 
-    alt="Facebook" 
-    className="w-8 h-8 hover:scale-110 transition-transform" 
-  />
-  </a>
 </div>
     <div className="second-footer">
         <BottomFooter />
