@@ -115,7 +115,7 @@ export default function Home() {
         <br /><br /><br /><br /><br /><br /><br /><br />
         </div>
         <div className="bg-black "><Contact/></div>
-        <footer className='bg-black'> <Footer/></footer>
+        <footer className="bg-gradient-to-b from-blue-900 to-cyan-500"> <Footer/></footer>
       </div>
 
     </motion.div>
