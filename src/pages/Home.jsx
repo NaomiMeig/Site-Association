@@ -11,7 +11,7 @@ import Footer from '../components/footer/Footer'
 import Partenaire from '../components/Partner/Partenaire'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import { events } from '../variables/events'
 
 const images = [
   '/src/assets/img1.jpeg',
@@ -101,7 +101,7 @@ export default function Home() {
           ))}
         </Slider>
           
-       <div><Arrierre /></div> <br />
+       <div><Arrierre events={events}/></div> <br />
        <div><Stats/></div>
         <div> <Element2 /></div>  
 <br /><br /><br /><br />

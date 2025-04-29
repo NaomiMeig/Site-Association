@@ -1,13 +1,30 @@
 import { useEffect, useState } from 'react'
 import '../styles/Cadrant.css'
 
-function Cadrant() {
+function Cadrant({events }) {
   const [timeLeft, setTimeLeft] = useState({})
-  const eventDate = new Date("2025-05-21T15:50:00")
+  const [nextEvent , setNextEvent ] = useState(null)
 
+
+  
+  useEffect(()=> {
+    const now = new Date()
+    const dateFiltrer = events
+     .filter(event => new Date(event.date) > now)
+     .sort((a,b) => new Date(a.date) - new Date(b.date));
+
+    if(dateFiltrer.length > 0 ){
+      setNextEvent(dateFiltrer[0])
+    }
+  } ,[events])
+
+  
   useEffect(() => {
+    if(!nextEvent){return }
+
     const interval = setInterval(() => {
       const now = new Date()
+      const eventDate= new Date(nextEvent.date)
       const distance = eventDate - now
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24))
