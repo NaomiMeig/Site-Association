@@ -1,0 +1,8 @@
+.slick-slide {
+    margin: 0 10px; /* Espace horizontal entre les éléments */
+}
+
+h1 {
+    margin-bottom: 0;  /* Supprime la marge inférieure de l'en-tête */
+    padding-bottom: 0; /* Supprime le padding supplémentaire sous l'en-tête */
+  }

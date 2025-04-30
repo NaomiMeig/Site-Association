@@ -110,12 +110,11 @@ export default function Home() {
           <Partenaire />
         </div>
         <br /><br /><br /><br />
-        <div><Compartiment/> </div> 
         <div className='bg-black'>
         <br /><br /><br /><br /><br /><br /><br /><br />
         </div>
         <div className="bg-black "><Contact/></div>
-        <footer className="bg-gradient-to-b from-blue-900 to-cyan-500"> <Footer/></footer>
+        <footer className="bg-gradient-to-b from-cyan-500 to-blue-900"> <Footer/></footer>
       </div>
 
     </motion.div>

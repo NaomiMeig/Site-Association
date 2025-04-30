@@ -13,15 +13,15 @@ function Events() {
       <div className="events-list">
         {events.map((event) => (
           <div key={event.id} className="event-card">
-            <div className="event-content">
-              <div className="event-date">{event.date}</div>
-              <div className="event-description">{event.description}</div>
-            </div>
-            <img 
+             <img 
               src={event.img} 
               alt={`Événement du ${event.date}`} 
               className="event-image"
             />
+            <div className="event-content">
+              <div className="event-date">{event.date}</div>
+              <div className="event-description">{event.description}</div>
+            </div>
           </div>
         ))}
       </div>

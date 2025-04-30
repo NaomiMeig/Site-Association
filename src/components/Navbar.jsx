@@ -36,12 +36,14 @@ export default function Navbar() {
           hover:border-cyan-300 transition-colors duration-700 pb-10">Gallery</Link>
           <Link to="/contact" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
           hover:border-cyan-300 transition-colors duration-700 pb-10">Contact Us</Link>
+          <Link to="/Equipe" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent
+          hover:border-cyan-300 transition-colors duration-700 pb-10"> Notre Equipe</Link>
           <Link to="/ActionsRealisees" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent
           hover:border-cyan-300 transition-colors duration-700 pb-10"> Actions Réalisées</Link>
       </div>
       <div className="">
         <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500'>Get started</button>
-        </div>
+      </div>
       </div>
     </nav>
   )

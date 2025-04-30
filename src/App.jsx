@@ -6,6 +6,9 @@ import Events from './pages/Events'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import ActionsRealisees from './pages/ActionRealisees'
+import Equipe from './pages/Equipe'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {
@@ -21,6 +24,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="ActionsRealisees" element={<ActionsRealisees/>}/>
+          <Route path="/equipe" element={<Equipe/>}/>
           {/* <Route path="/ActionsRealisee" element={<ActionRealisee/>} /> */}
         </Routes>
       </div>
