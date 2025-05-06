@@ -3,7 +3,6 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
-import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import ActionsRealisees from './pages/ActionRealisees'
 import Equipe from './pages/Equipe'
@@ -21,11 +20,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="ActionsRealisees" element={<ActionsRealisees/>}/>
           <Route path="/equipe" element={<Equipe/>}/>
-          {/* <Route path="/ActionsRealisee" element={<ActionRealisee/>} /> */}
         </Routes>
       </div>
     </Router>

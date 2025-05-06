@@ -9,11 +9,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo de l’association */}
        <div className="flex items-center">
-         <img src="src/assets/aqj.png" alt="Logo" className="h-26 w-auto mr-2" />
+         <img src="src/assets/aqj.png" alt="Logo" className="h-20 w-auto mr-3 mt-2" />
          <span className="text-xl flex flex-col leading-tight">
-         <span className='text-blue-600'>جمعية تأهيل الشباب</span>
-         <span className='text-cyan-300 '>ⵜⴰⵎⵙⵎⵓⵏⵜ ⵓⵙⵖⵔⵜ ⵏ ⵜⵉⵄⵄⵓⵔⵎⴰ</span>
-         <span className='text-blue-600'>Association Qualification des jeunes</span>
+         <span className='text-blue-600 font-bold'>جمعية تأهيل الشباب</span>
+         <span className='text-cyan-300 font-bold'>ⵜⴰⵎⵙⵎⵓⵏⵜ ⵓⵙⵖⵔⵜ ⵏ ⵜⵉⵄⵄⵓⵔⵎⴰ</span>
+         <span className='text-blue-900 font-bold'>Association Qualification des Jeunes</span>
          </span>
        </div>
 
@@ -32,8 +32,6 @@ export default function Navbar() {
           hover:border-cyan-300 transition-colors duration-700 pb-10">About</Link>
           <Link to="/events" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
           hover:border-cyan-300 transition-colors duration-700 pb-10">Events</Link>
-          <Link to="/gallery" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
-          hover:border-cyan-300 transition-colors duration-700 pb-10">Gallery</Link>
           <Link to="/contact" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
           hover:border-cyan-300 transition-colors duration-700 pb-10">Contact Us</Link>
           <Link to="/Equipe" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent

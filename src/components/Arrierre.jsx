@@ -1,7 +1,7 @@
 import Cadrant from './Cadrant'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { events } from '../variables/events';
+import { events } from '../variables/events.jsx';
 
 
 function Arrierre({events }){
@@ -16,7 +16,7 @@ function Arrierre({events }){
     transition={{ duration: 0.8, ease: "easeOut" }}
     className="box"> 
     <div className="h-100vh bg-blue-950">
-        <Cadrant events={events}/>
+        <Cadrant events={events} />
     </div>
     </motion.div>
 }

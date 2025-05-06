@@ -12,6 +12,8 @@ import Partenaire from '../components/Partner/Partenaire'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { events } from '../variables/events'
+import { Link } from 'react-router-dom';
+
 
 const images = [
   '/src/assets/img1.jpeg',
@@ -93,7 +95,14 @@ export default function Home() {
                     pu développer une approche participative basée sur un travail rapproché, en assurant la 
                     mobilisation des multiples parties impliquées dans la gestion des affaires et des questions 
                     liées aux jeunes</p>
-                    <button className='bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500 mt-[50px] '>Read more</button>
+    
+                    <Link to="/about"
+                      onClick={() => window.scrollTo(0, 0)}
+                      className="bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500 mt-[50px]"
+                    >
+                      Read more
+                    </Link>
+
                 </div>
                 
               </div>
@@ -110,11 +119,14 @@ export default function Home() {
           <Partenaire />
         </div>
         <br /><br /><br /><br />
-        <div className='bg-black'>
-        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div className='bg-gray-400'>
+        <br /><br />
         </div>
-        <div className="bg-black "><Contact/></div>
-        <footer className="bg-gradient-to-b from-cyan-500 to-blue-900"> <Footer/></footer>
+        <div className="bg-gray-400 "><Contact/></div>
+        <div className="bg-gradient-to-b from-cyan-300 to-blue-900 w-full">
+        <Footer/>
+      </div>
+
       </div>
 
     </motion.div>

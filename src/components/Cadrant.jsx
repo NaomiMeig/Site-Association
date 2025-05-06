@@ -1,47 +1,45 @@
-import { useEffect, useState } from 'react'
-import '../styles/Cadrant.css'
+import { useEffect, useState } from 'react';
+import '../styles/Cadrant.css';
 
-function Cadrant({events }) {
-  const [timeLeft, setTimeLeft] = useState({})
-  const [nextEvent , setNextEvent ] = useState(null)
+function Cadrant({ events }) {
+  const [timeLeft, setTimeLeft] = useState({});
+  const [nextEvent, setNextEvent] = useState(null);
 
-
-  
-  useEffect(()=> {
-    const now = new Date()
-    const dateFiltrer = events
-     .filter(event => new Date(event.date) > now)
-     .sort((a,b) => new Date(a.date) - new Date(b.date));
-
-    if(dateFiltrer.length > 0 ){
-      setNextEvent(dateFiltrer[0])
-    }
-  } ,[events])
-
-  
   useEffect(() => {
-    if(!nextEvent){return }
+    const now = new Date();
+    const upcomingEvents = events
+      .filter(event => new Date(event.date) > now)
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    if (upcomingEvents.length > 0) {
+      setNextEvent(upcomingEvents[0]);
+    }
+  }, [events]);
+
+  useEffect(() => {
+    if (!nextEvent) return;
 
     const interval = setInterval(() => {
-      const now = new Date()
-      const eventDate= new Date(nextEvent.date)
-      const distance = eventDate - now
+      const now = new Date();
+      const eventDate = new Date(nextEvent.date);
+      const distance = eventDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-
-      if (distance > 0) {
-        setTimeLeft({ days, hours, minutes, seconds })
-      } else {
-        clearInterval(interval)
-        setTimeLeft({})
+      if (distance <= 0) {
+        clearInterval(interval);
+        setTimeLeft({});
+        return;
       }
-    }, 1000)
 
-    return () => clearInterval(interval)
-  }, [])
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [nextEvent]);
 
   return (
     <div className="first-cadrant">
@@ -63,16 +61,19 @@ function Cadrant({events }) {
           <p className="event-started">L'événement a commencé !</p>
         )}
 
-        <p className="cadrant-description">
-          Rejoignez-nous pour notre prochain événement : conférences, ateliers, débats et échanges
-          avec les jeunes et les partenaires. Un moment unique pour renforcer nos valeurs associatives.
-        </p>
+        {nextEvent && (
+          <p className="cadrant-description">
+            Prochain événement : <strong>{nextEvent.title}</strong><br />
+            {nextEvent.description}
+          </p>
+        )}
       </section>
     </div>
-  )
+  );
 }
 
 export default Cadrant;
+
 
 
 

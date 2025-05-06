@@ -1,5 +1,6 @@
 import '../styles/Event.css'
 import { events } from '../variables/events';
+import Footer from '../components/footer/Footer';
 
 
 function Events() {
@@ -13,18 +14,20 @@ function Events() {
       <div className="events-list">
         {events.map((event) => (
           <div key={event.id} className="event-card">
-             <img 
+            <div className="event-content">
+            <div className="event-title">{event.title}</div>
+              <div className="event-date">{event.date}</div>
+              <div className="event-description">{event.description}</div>
+            </div>
+            <img 
               src={event.img} 
               alt={`Événement du ${event.date}`} 
               className="event-image"
             />
-            <div className="event-content">
-              <div className="event-date">{event.date}</div>
-              <div className="event-description">{event.description}</div>
-            </div>
           </div>
         ))}
       </div>
+      <div > <Footer/></div>
     </div>
   );
 }

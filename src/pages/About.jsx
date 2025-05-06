@@ -1,12 +1,19 @@
 import { useState } from "react"
 import Footer from "../components/footer/Footer"
+import { motion } from 'framer-motion';
+
 
 export default function About() {
 
 
   const [isOpen , setIsOpen] = useState(true)
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className="bg-white p-6 rounded-xl shadow-xl"
+    >
       <h1 className="text-4xl font-bold text-blue-700 mb-8 text-center">Association Qualification des Jeunes (AQJ)</h1>
       
       <div className="bg-blue-50 p-6 rounded-lg mb-10">
@@ -77,17 +84,17 @@ export default function About() {
            {isOpen ? 'Fermer' : 'Afficher'} 
            </button> <br /><br />
             {isOpen ? (<ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 duration-500 ">
-  <li className="bg-white p-3 rounded shadow-sm">Programmes sur les politiques publiques jeunesse</li>
-  <li className="bg-white p-3 rounded shadow-sm">Formations pour l'inclusion économique</li>
-  <li className="bg-white p-3 rounded shadow-sm">Programmes d'autonomisation des jeunes</li>
-  <li className="bg-white p-3 rounded shadow-sm">Initiatives jeunesse et migration</li>
-  <li className="bg-white p-3 rounded shadow-sm">Leadership féminin</li>
-  <li className="bg-white p-3 rounded shadow-sm">Ateliers et formations</li>
-  <li className="bg-white p-3 rounded shadow-sm">Débats et forums</li>
-  <li className="bg-white p-3 rounded shadow-sm">Campagnes de sensibilisation</li>
-  <li className="bg-white p-3 rounded shadow-sm">Échanges culturels</li>
-  <li className="bg-white p-3 rounded shadow-sm">Publications audiovisuelles</li>
-</ul>) : null }
+            <li className="bg-white p-3 rounded shadow-sm">Programmes sur les politiques publiques jeunesse</li>
+            <li className="bg-white p-3 rounded shadow-sm">Formations pour l'inclusion économique</li>
+            <li className="bg-white p-3 rounded shadow-sm">Programmes d'autonomisation des jeunes</li>
+            <li className="bg-white p-3 rounded shadow-sm">Initiatives jeunesse et migration</li>
+            <li className="bg-white p-3 rounded shadow-sm">Leadership féminin</li>
+            <li className="bg-white p-3 rounded shadow-sm">Ateliers et formations</li>
+           <li className="bg-white p-3 rounded shadow-sm">Débats et forums</li>
+           <li className="bg-white p-3 rounded shadow-sm">Campagnes de sensibilisation</li>
+           <li className="bg-white p-3 rounded shadow-sm">Échanges culturels</li>
+           <li className="bg-white p-3 rounded shadow-sm">Publications audiovisuelles</li>
+            </ul>) : null }
         </div> 
       </div>
 
@@ -150,6 +157,6 @@ export default function About() {
         </div>
       </div>
       <div > <Footer/></div>
-    </div>
+    </motion.div>
   )
 }
