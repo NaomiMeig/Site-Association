@@ -242,7 +242,7 @@
 //         }
 //         lastTime = timestamp;
 //       }
-      
+    
 //       requestRef.current = requestAnimationFrame(animate);
 //     };
 
@@ -389,8 +389,6 @@
 //   .logo-card:nth-child(3n+1) { transform: translateZ(30px); }
 //   .logo-card:nth-child(3n+2) { transform: translateZ(20px); }
 // } -->
-
-
 
 // <div className="box">
 //         <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl ">

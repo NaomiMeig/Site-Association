@@ -4,6 +4,46 @@ function BottomFooter(){
 
     return <div className="bloc-footer">
         <div>
+          <h3 className="social-title">Suivez-nous</h3>
+          <div className="social-icons">
+            <a href="https://www.instagram.com/aqj__bm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <img
+                src="src/assets/instagram.png"
+                alt="Instagram"
+                className="social-icon"
+              />
+            </a>
+            <a href="https://www.facebook.com/AQJ.BM/">
+              <img
+                src="src/assets/communication.png"
+                alt="Facebook"
+                className="social-icon"
+              />
+            </a>
+            <a href="https://www.youtube.com/@AQJ-BM">
+              <img
+                src="src/assets/youtube.png"
+                alt="YouTube"
+                className="social-icon"
+              />
+            </a>
+            <a href="https://x.com/">
+              <img
+                src="src/assets/twitter.png"
+                alt="Twitter"
+                className="social-icon"
+              />
+            </a>
+            <a href="https://www.linkedin.com/">
+              <img
+                src="src/assets/Linkedin.png"
+                alt="LinkedIn"
+                className="social-icon"
+              />
+            </a>
+          </div>
+        </div>
+        <div>
         <h1 className="text-cyan-300 text-3xl  font-bold mb-25">COMPANY</h1><br/>
         <p className="text-gray-400 text-2xl mb-9 justify-center ml-5">About</p>
         <p className="text-gray-400 text-2xl mb-9 justify-center ml-5 ">Features</p>
