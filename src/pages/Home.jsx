@@ -119,10 +119,7 @@ export default function Home() {
           <Partenaire />
         </div>
         <br /><br /><br /><br />
-        <div className='bg-gray-400'>
-        <br /><br />
-        </div>
-        <div className="bg-gray-400 "><Contact/></div>
+        <div className="bg-gray-400"><Contact/></div>
         <div className="bg-gradient-to-b from-cyan-300 to-blue-900 w-full">
         <Footer/>
       </div>

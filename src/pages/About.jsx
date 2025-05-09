@@ -98,7 +98,7 @@ export default function About() {
         </div> 
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-10">
+      <div className="grid md:grid-cols-2 gap-8 mb-10 ">
         <div>
           <h2 className="text-2xl font-semibold text-blue-700 mb-4">Coordonnées</h2>
           <div className="bg-white p-6 rounded-lg shadow-sm">

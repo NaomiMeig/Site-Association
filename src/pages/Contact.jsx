@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Footer from "../components/footer/Footer";
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -15,7 +16,8 @@ export default function Contact() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="box"
     >
-      <div className="p-8 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl border border-white">
+      <div className="p-8 ">
+      <div className="p-8 max-w-2xl  mx-auto bg-white rounded-2xl shadow-xl border border-white">
         <h2 className="text-3xl font-bold text-cyan-300 mb-2">Contactez-nous</h2>
         <p className="text-gray-500 mb-6">
           Une question ? Une proposition ? Écrivez-nous ici, nous vous répondrons rapidement !
@@ -56,7 +58,8 @@ export default function Contact() {
             </svg>
             Envoyer
           </button>
-        </form>
+        </form> 
+      </div>
       </div>
     </motion.div>
   );
