@@ -4,12 +4,19 @@ function BottomFooter(){
 
     return <div className="bloc-footer">
         <div>
-          <h3 className="social-title">Suivez-nous</h3>
+          <h3 className="text-cyan-300 text-3xl  font-bold mb-25">Suivez-nous</h3>
           <div className="social-icons">
             <a href="https://www.instagram.com/aqj__bm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
               <img
                 src="src/assets/instagram.png"
                 alt="Instagram"
+                className="social-icon"
+              />
+            </a>
+            <a href="https://www.linkedin.com/">
+              <img
+                src="src/assets/Linkedin.png"
+                alt="LinkedIn"
                 className="social-icon"
               />
             </a>
@@ -34,10 +41,10 @@ function BottomFooter(){
                 className="social-icon"
               />
             </a>
-            <a href="https://www.linkedin.com/">
+            <a href="https://x.com/">
               <img
-                src="src/assets/Linkedin.png"
-                alt="LinkedIn"
+                src="src/assets/whatsapp.png"
+                alt="whatsapp"
                 className="social-icon"
               />
             </a>
