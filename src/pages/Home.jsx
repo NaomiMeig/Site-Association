@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { events } from '../variables/events'
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 
 const images = [
@@ -67,6 +68,8 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [])
 
+  const { t } = useTranslation();
+
   return (
     <motion.div
       ref={ref}
@@ -86,21 +89,17 @@ export default function Home() {
                 style={{ backgroundImage: `url(${img})` }}
               >
                 <div className="bg-black/50 h-full flex flex-col items-center justify-center text-white text-center">
-                  <h1 className="text-4xl md:text-4xl font-bold">Association Qualification des Jeunes</h1>
-                  <h2 className="text-6xl md:text-6xl font-bold text-cyan-300">AQJ</h2>
-                  <h3 className="text-3xl md:text-3xl font-bold">"Une Jeunesse socio-active"</h3>
+                  <h1 className="text-4xl md:text-4xl font-bold">{t('home.title')}</h1>
+                  <h2 className="text-6xl md:text-6xl font-bold text-cyan-300">{t('home.subtitle')}</h2>
+                  <h3 className="text-3xl md:text-3xl font-bold">{t('home.quote')}</h3>
                   <p className="flex items-center justify-center mt-[50px] px-[150px] text-2xl font-bold leading-relaxed transition-all duration-500 
-             scroll-ani-fade-in">L'AQJ, fondée le Samedi 25 Mai 2013; est une platforme née de la volontée de 
-                    convergence des différents jeunes de la ville de Béni-Mellal, sur laquelle; on a 
-                    pu développer une approche participative basée sur un travail rapproché, en assurant la 
-                    mobilisation des multiples parties impliquées dans la gestion des affaires et des questions 
-                    liées aux jeunes</p>
+             scroll-ani-fade-in">{t('home.description')}</p>
     
                     <Link to="/about"
                       onClick={() => window.scrollTo(0, 0)}
                       className="bg-cyan-300 text-white p-4 pl-10 pr-10 rounded-2xl hover:bg-blue-600 duration-500 mt-[50px]"
                     >
-                      Read more
+                      {t('home.read_more')}
                     </Link>
 
                 </div>
@@ -111,7 +110,7 @@ export default function Home() {
         </Slider>
           
        <div><Arrierre events={events}/></div> <br />
-       <div><Stats/></div>
+       <div><Stats/></div> <br />
         <div> <Element2 /></div>  
 <br /><br /><br /><br />
         
