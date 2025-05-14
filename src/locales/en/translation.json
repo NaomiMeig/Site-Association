@@ -39,13 +39,25 @@
   "partenaire":{
     "title1":"OUR PARTNERS"
   },
-  "contact": {
+ "contact": {
     "title": "Contact Us",
-    "subtitle": "A question? A suggestion? Write to us here, and we will reply quickly!",
-    "name": "Your name",
-    "email": "Your email",
-    "message": "Your message",
-    "button": "Send"
+    "subtitle": "A question? A proposal? Write to us here.",
+    "name": "Your full name",
+    "email": "email@example.com",
+    "message": "Describe your request in detail...",
+    "button": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "errors": {
+      "nameRequired": "Name is required",
+      "nameInvalid": "Invalid name (minimum 2 alphabetic characters)",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email format",
+      "messageRequired": "Message is required",
+      "messageTooShort": "Minimum 10 characters required",
+      "formInvalid": "Please fix the errors in the form",
+      "sendFailed": "Failed to send the message"
+    }
   },
   "footer": {
     "follow_us": "Follow us",

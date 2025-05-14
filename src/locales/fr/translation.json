@@ -41,12 +41,26 @@
     "title1":"NOS PARTENAIRES"
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Une question ? Une proposition ? Écrivez-nous ici, nous vous répondrons rapidement !",
-    "name": "Votre nom",
-    "email": "Votre email",
-    "message": "Votre message",
-    "button": "Envoyer"
+   "title": "Contactez-nous",
+  "subtitle": "Une question ? Une proposition ? Écrivez-nous ici, nous vous répondrons rapidement !",
+  "name": "Votre nom complet",
+  "email": "email@exemple.com",
+  "message": "Décrivez votre demande en détail...",
+  "button": "Envoyer le message",
+  "sending": "Envoi en cours...",
+  "success": "Message envoyé avec succès !",
+  "errors": {
+    "nameRequired": "Le nom est requis",
+    "nameInvalid": "Nom invalide (minimum 2 caractères alphabétiques)",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Format d'email invalide",
+    "messageRequired": "Le message est requis",
+    "messageShort": "Minimum 10 caractères requis",
+    "correctForm": "Veuillez corriger les erreurs dans le formulaire",
+    "invalidData": "Données du formulaire invalides",
+    "serverError": "Problème serveur - Veuillez réessayer plus tard",
+    "generic": "Erreur lors de l'envoi du message"
+  }
   },
   "footer": {
     "follow_us": "Suivez-nous",

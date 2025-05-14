@@ -109,13 +109,8 @@ export default function Home() {
           ))}
         </Slider>
           
-<<<<<<< HEAD
        <div><Arrierre events={events}/></div> <br />
        <div><Stats/></div> <br />
-=======
-       <div><Arrierre events={events}/></div>
-       <div><Stats/></div>
->>>>>>> fd218828a962abf5745688bb889ff465e751cd67
         <div> <Element2 /></div>  
 <br /><br /><br /><br />
         

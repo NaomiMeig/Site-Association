@@ -39,13 +39,25 @@
   "partenaire":{
     "title1":"شركاؤنا"
   },
-   "contact": {
+"contact": {
     "title": "اتصل بنا",
-    "subtitle": "هل لديك سؤال؟ اقتراح؟ اكتب لنا هنا وسنرد عليك بسرعة!",
-    "name": "اسمك",
-    "email": "بريدك الإلكتروني",
-    "message": "رسالتك",
-    "button": "إرسال"
+    "subtitle": "لديك سؤال؟ اقتراح؟ اكتب لنا هنا.",
+    "name": "الاسم الكامل",
+    "email": "email@example.com",
+    "message": "صف طلبك بالتفصيل...",
+    "button": "إرسال",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم إرسال الرسالة بنجاح!",
+    "errors": {
+      "nameRequired": "الاسم مطلوب",
+      "nameInvalid": "اسم غير صالح (على الأقل حرفان أبجديان)",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "emailInvalid": "صيغة البريد الإلكتروني غير صحيحة",
+      "messageRequired": "الرسالة مطلوبة",
+      "messageTooShort": "يجب إدخال 10 أحرف على الأقل",
+      "formInvalid": "يرجى تصحيح الأخطاء في النموذج",
+      "sendFailed": "فشل في إرسال الرسالة"
+    }
   },
   "footer": {
     "follow_us": "تابعنا",
