@@ -1,15 +1,23 @@
 import Footer from '../components/footer/Footer';
 import '../styles/ActionsRealisee.css';  
 import { actions } from '../variables/action'; 
+import { useTranslation } from 'react-i18next';
+
 
 function Actions() {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
+  
+
+
   return (
     <div className="actions-container">
-      <h2 className="actions-title">Nos actions réalisées</h2>
-      <p className="actions-subtitle">Découvrez nos actions passées et leur impact</p>
+      <h2 className="actions-title">{t('actions.title')}</h2>
+      <p className="actions-subtitle">{t('actions.subtitle')} </p>
       
       <div className="actions-list">
         {actions.map((action) => (
+          
           <div key={action.id} className="action-card">
             <img 
               src={action.image} 

@@ -2,9 +2,12 @@ import { useState } from "react"
 import Footer from "../components/footer/Footer"
 import { motion } from 'framer-motion';
 
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
 
+  const members = t('about.team.members', { returnObjects: true });
 
   const [isOpen , setIsOpen] = useState(true)
   return (
@@ -14,98 +17,66 @@ export default function About() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
       className="bg-white p-6 rounded-xl shadow-xl"
     >
-      <h1 className="text-4xl font-bold text-blue-700 mb-8 text-center">Association Qualification des Jeunes (AQJ)</h1>
+      <h1 className="text-4xl font-bold text-blue-700 mb-8 text-center">{t("about.title")}</h1>
       
       <div className="bg-blue-50 p-6 rounded-lg mb-10">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">Notre Identité</h2>
+        <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t("about.identityTitle")}</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Fondée le 25 Mai 2013, AQJ est une plateforme jeune de jeunesse marocaine née de la convergence des volontés 
-          locales des jeunes hommes et femmes de Béni-Mellal. Notre vocation : <em>"Une jeunesse associative ; créée par 
-          les jeunes et faite pour les jeunes"</em>.
+          {t("about.identityText1")}
         </p>
         <p className="text-gray-700 leading-relaxed">
-          Nous développons une approche participative et progressiste basée sur un travail étroit avec les jeunes, en 
-          assurant leur participation active ainsi que celle des multiples acteurs impliqués dans les questions jeunesse.
+         {t("about.identityText2")}
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-10">
         <div>
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Territoire d'Intervention</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t("about.territoryTitle")}</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            L'association opère principalement dans la région de Béni-Mellal/Khénifra, mais peut mener des activités 
-            au niveau national lorsque l'opportunité se présente.
+            {t("about.territoryText")}
           </p>
 
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Nos Objectifs Stratégiques</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t("about.objectivesTitle")}</h2>
           <ul className="space-y-3 text-gray-700">
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2">•</span>
-              <span>Renforcer la démocratie citoyenne chez les jeunes</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2">•</span>
-              <span>Ancrer les principes de citoyenneté, démocratie et volontariat</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2">•</span>
-              <span>Vulgariser les droits civils, économiques, sociaux et culturels</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2">•</span>
-              <span>Soutenir la participation des jeunes dans les affaires publiques</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2">•</span>
-              <span>Renforcer les capacités des jeunes pour une meilleure intégration</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2">•</span>
-              <span>Promouvoir le développement durable</span>
-            </li>
+          {t("about.objectivesList", { returnObjects: true }).map((obj, i) => (
+          <li  className="flex items-start" key={i}>• {obj}</li>
+        ))}
           </ul>
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Domaines d'Intervention</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t("about.domainsTitle")}</h2>
           <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
-            <h3 className="text-lg font-medium text-blue-600 mb-2">Jeunes & Femmes</h3>
+            <h3 className="text-lg font-medium text-blue-600 mb-2">{t("about.youthWomenTitle")}</h3>
             <ul className="list-disc pl-5 text-gray-700 space-y-1">
-              <li>Renforcement de capacités (personnelles et professionnelles)</li>
-              <li>Soft skills & life-skills</li>
-              <li>Entreprenariat et leadership</li>
-              <li>Engagement dans la vie publique</li>
+               {t("about.youthWomenList", { returnObjects: true }).map((item, i) => (
+          <li key={i}> {item}</li>
+        ))}
             </ul>
           </div>
 
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Actions Réalisées</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t("about.actionsTitle")}</h2>
           <button onClick={()=> setIsOpen(!isOpen)}
            className="bg-blue-600  text-white p-3 pl-6 pr-6 rounded-2xl hover:bg-blue-600 duration-500 "> 
-           {isOpen ? 'Fermer' : 'Afficher'} 
+           {isOpen ? 'Fermer ▲' : 'Afficher ▼'} 
            </button> <br /><br />
             {isOpen ? (<ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 duration-500 ">
-            <li className="bg-white p-3 rounded shadow-sm">Programmes sur les politiques publiques jeunesse</li>
-            <li className="bg-white p-3 rounded shadow-sm">Formations pour l'inclusion économique</li>
-            <li className="bg-white p-3 rounded shadow-sm">Programmes d'autonomisation des jeunes</li>
-            <li className="bg-white p-3 rounded shadow-sm">Initiatives jeunesse et migration</li>
-            <li className="bg-white p-3 rounded shadow-sm">Leadership féminin</li>
-            <li className="bg-white p-3 rounded shadow-sm">Ateliers et formations</li>
-           <li className="bg-white p-3 rounded shadow-sm">Débats et forums</li>
-           <li className="bg-white p-3 rounded shadow-sm">Campagnes de sensibilisation</li>
-           <li className="bg-white p-3 rounded shadow-sm">Échanges culturels</li>
-           <li className="bg-white p-3 rounded shadow-sm">Publications audiovisuelles</li>
+ {t("about.actionsList", { returnObjects: true }).map((item, i) => (
+          <li className="bg-white p-3 rounded shadow-sm"  key={i}>• {item}</li>
+        ))}
             </ul>) : null }
-        </div> 
+        </div>
+         
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-10 ">
         <div>
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Coordonnées</h2>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t("about.contactTitle")}</h2>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <p className="text-gray-700 mb-2"><span className="font-medium">Adresse :</span> Blvd. Mohammed VI, imm. Jannah, 4ème Étage, Appart. N°7, Béni-Mellal, MAROC</p>
-            <p className="text-gray-700 mb-2"><span className="font-medium">Tél/Fax :</span> +212 8-08 67 06 22</p>
-            <p className="text-gray-700 mb-2"><span className="font-medium">WhatsApp :</span> +212 6-91 68 85 03</p>
-            <p className="text-gray-700 mb-4"><span className="font-medium">Email :</span> AQJ.Direction@gmail.com</p>
+            <p className="text-gray-700 mb-2"><span className="font-medium">{t("about.address")} :</span> Blvd. Mohammed VI, imm. Jann</p>
+            <p className="text-gray-700 mb-2"><span className="font-medium">{t("about.tel")} :</span> +212 8-08 67 06 22</p>
+            <p className="text-gray-700 mb-2"><span className="font-medium">{t("about.whatsapp")} :</span> +212 6-91 68 85 03</p>
+            <p className="text-gray-700 mb-4"><span className="font-medium">{t("about.email")} :</span> AQJ.Direction@gmail.com</p>
             
             <div className="flex space-x-4 mt-4">
               <a href="https://www.facebook.com/AQJ.BM/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
@@ -131,29 +102,17 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Équipe Dirigeante</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-blue-600">Mme. Oumayma OUGUENNOUS</h3>
-              <p className="text-gray-600">Présidente</p>
-              <p className="text-gray-700 mt-1">Email: omaymaouguenouss@gmail.com</p>
-              <p className="text-gray-700">Tél: 00 212 7 06 05 87 80</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-blue-600">Mr. Rachid EL HABIB</h3>
-              <p className="text-gray-600">Directeur Exécutif</p>
-              <p className="text-gray-700 mt-1">Email: Rachidhabib10@gmail.com</p>
-              <p className="text-gray-700">Tél: 00 212 6 59 23 57 01</p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <h3 className="text-lg font-medium text-blue-600">Mr. Youssef LOUTA</h3>
-              <p className="text-gray-600">Chargé des Relations Publiques et Partenariats</p>
-              <p className="text-gray-700 mt-1">Email: Youssef.LOUTA@gmail.com</p>
-              <p className="text-gray-700">Tél: 00 212 6 99 28 37 04</p>
-            </div>
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">{t('about.team.title')}</h2>
+           <div className="space-y-4">
+        {members.map((member, index) => (
+          <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
+            <h3 className="text-lg font-medium text-blue-600">{member.name}</h3>
+            <p className="text-gray-600">{member.role}</p>
+            <p className="text-gray-700 mt-1">{member.email}</p>
+            <p className="text-gray-700">{member.phone}</p>
           </div>
+        ))}
+      </div>
         </div>
       </div>
       <div > <Footer/></div>

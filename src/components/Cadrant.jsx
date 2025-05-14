@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import '../styles/Cadrant.css';
+import { useTranslation } from 'react-i18next';
 
 function Cadrant({ events }) {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
   const [timeLeft, setTimeLeft] = useState({});
   const [nextEvent, setNextEvent] = useState(null);
 
@@ -52,20 +55,21 @@ function Cadrant({ events }) {
       <section className="third-cadrant">
         {timeLeft.days !== undefined ? (
           <div className="countdown">
-            <div><p>{timeLeft.days}</p><span>Jours</span></div>
-            <div><p>{timeLeft.hours}</p><span>Heures</span></div>
-            <div><p>{timeLeft.minutes}</p><span>Minutes</span></div>
-            <div><p>{timeLeft.seconds}</p><span>Secondes</span></div>
+            <div><p>{timeLeft.days}</p><span>{t('cadrant.days')}</span></div>
+            <div><p>{timeLeft.hours}</p><span>{t('cadrant.hours')}</span></div>
+            <div><p>{timeLeft.minutes}</p><span>{t('cadrant.minutes')}</span></div>
+            <div><p>{timeLeft.seconds}</p><span>{t('cadrant.seconds')}</span></div>
           </div>
         ) : (
           <p className="event-started">L'événement a commencé !</p>
         )}
 
         {nextEvent && (
-          <p className="cadrant-description">
-            Prochain événement : <strong>{nextEvent.title}</strong><br />
-            {nextEvent.description}
+         <p className="cadrant-description">
+           {t('cadrant.nextEvent')}<strong>{nextEvent.translations[currentLang]?.title}</strong><br />
+           {nextEvent.translations[currentLang]?.description}
           </p>
+
         )}
       </section>
     </div>

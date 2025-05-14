@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import '../../styles/partenaire.css';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from 'react-i18next';
 
 function Partenaire() {
   const logos = Array.from({ length: 22 }, (_, i) => i + 1);
@@ -42,13 +43,15 @@ function Partenaire() {
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
 
+  const { t } = useTranslation();
+
   return (<motion.div
     ref={ref}
     initial={{ opacity: 0, y: 100 }}
     animate={inView ? { opacity: 1, y: 0 } : {}}
     transition={{ duration: 0.8, ease: "easeOut" }}
     className="box"> 
-    <h1 className='text-cyan-300 text-5xl font-black text-center w-full mb-8 '>NOS PARTENAIRES</h1>
+    <h1 className='text-cyan-300 text-5xl font-black text-center w-full mb-8 '>{t('partenaire.title1')}</h1>
     <div className="carroussel-immersif">
       <div className="carroussel-track" ref={trackRef}>
         {[...logos, ...logos].map((logoNum, index) => ( 
