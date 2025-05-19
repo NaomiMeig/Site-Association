@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/footer/Footer";
 import { Toaster, toast } from 'react-hot-toast';
-import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -13,10 +12,6 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    emailjs.init("zlLispkVhr8fySJoX");
-  }, []);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]{2,}$/;
@@ -69,30 +64,31 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_dbotjki",
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_e0kjx29",
-        {
-          from_name: formData.name,
-          reply_to: formData.email,
-          message: formData.message
+      const response = await fetch("https://formsubmit.co/AQJ.Direction@gmail.com ", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
         },
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "zlLispkVhr8fySJoX"
-      );
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _template: "box",
+          _captcha: "false",
+          _subject: "Nouveau message via le formulaire React"
+        })
+      });
 
-      toast.success(t("contact.success"));
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("Erreur d'envoi:", error);
-      let errorMessage = t("contact.errors.generic");
-
-      if (error.status === 400) {
-        errorMessage = t("contact.errors.invalidData");
-      } else if (error.status === 500) {
-        errorMessage = t("contact.errors.serverError");
+      if (response.ok) {
+        toast.success("Message envoyé avec succès !");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Une erreur est survenue. Réessayez.");
       }
-
-      toast.error(errorMessage);
+    } catch (error) {
+      console.error("Erreur FormSubmit:", error);
+      toast.error("Erreur lors de l'envoi du message");
     } finally {
       setIsSubmitting(false);
     }
@@ -100,7 +96,7 @@ export default function Contact() {
 
   return (
     <>
-      <Toaster 
+      <Toaster
         position="top-center"
         toastOptions={{
           duration: 4000,

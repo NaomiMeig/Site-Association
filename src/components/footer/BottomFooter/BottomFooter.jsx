@@ -9,24 +9,27 @@ function BottomFooter() {
       <div>
         <h3 className="social-title">{t("footer.follow_us")}</h3>
         <div className="social-icons">
-          <a href="https://www.instagram.com/aqj__bm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            <img src="src/assets/instagram.png" alt="Instagram" className="social-icon" />
+          <a href='https://wa.me/212691688503'>
+            <img src="src/assets/whatsapp.png" alt="whatsapp" className="social-icon" />
           </a>
           <a href="https://www.facebook.com/AQJ.BM/">
             <img src="src/assets/communication.png" alt="Facebook" className="social-icon" />
           </a>
+          <a href="https://www.linkedin.com/">
+            <img src="src/assets/Linkedin.png" alt="LinkedIn" className="social-icon" />
+          </a>
+          <a href="https://www.instagram.com/aqj__bm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+            <img src="src/assets/instagram.png" alt="Instagram" className="social-icon" />
+          </a>
+          
           <a href="https://www.youtube.com/@AQJ-BM">
             <img src="src/assets/youtube.png" alt="YouTube" className="social-icon" />
           </a>
           <a href="https://x.com/">
             <img src="src/assets/twitter.png" alt="Twitter" className="social-icon" />
           </a>
-          <a href="https://www.linkedin.com/">
-            <img src="src/assets/Linkedin.png" alt="LinkedIn" className="social-icon" />
-          </a>
-          <a>
-            <img src="src/assets/whatsapp.png" alt="whatsapp" className="social-icon" />
-          </a>
+          
+          
         </div>
       </div>
 
