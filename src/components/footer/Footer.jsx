@@ -31,6 +31,8 @@ function Footer() {
         <div className="info-column">
           <BottomFooter />
         </div>
+        <span 
+        style ={{ color : 'white' , fontWeight :'bold' , alignItems:'flex-end' , justifyContent : 'flex-end'}}>© copyright - Association Qualification des Jeunes – ⵜⴰⵎⵙⵎⵓⵏⵜ ⵓⵙⵖⵔⵜ ⵏ ⵜⵉⵄⵄⵓⵔⵎⴰ – ‎جمعية التأهيل للشباب</span>
       </div>
     </motion.footer>
   );

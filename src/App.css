@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap');
-
+/* 
 body {
-  font-family: 'Arial', sans-serif; /* Par défaut pour LTR */
-}
+  font-family: 'Arial', sans-serif; Par défaut pour LTR */
+/* } */
 
-body[dir='rtl'] {
+/* body[dir='rtl'] {
   font-family: 'Noto Sans Arabic', sans-serif; /* Police pour RTL */
-}
+/* }  */

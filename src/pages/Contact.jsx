@@ -13,13 +13,6 @@ export default function Contact() {
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-<<<<<<< HEAD
-=======
-  useEffect(() => {
-    emailjs.init("zlLispkVhr8fySJoX");
-  }, []);
-
->>>>>>> 61f1bcb6b7330f77424ffd66e35206d052f4390e
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const nameRegex = /^[a-zA-ZÀ-ÿ\s'-]{2,}$/;
 
@@ -71,7 +64,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/akakponaomi0@gmail.com", {
+      const response = await fetch("https://formsubmit.co/AQJ.Direction@gmail.com ", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +80,6 @@ export default function Contact() {
         })
       });
 
-<<<<<<< HEAD
       if (response.ok) {
         toast.success("Message envoyé avec succès !");
         setFormData({ name: "", email: "", message: "" });
@@ -97,21 +89,6 @@ export default function Contact() {
     } catch (error) {
       console.error("Erreur FormSubmit:", error);
       toast.error("Erreur lors de l'envoi du message");
-=======
-      toast.success(t("contact.success"));
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("Erreur d'envoi:", error);
-      let errorMessage = t("contact.errors.generic");
-
-      if (error.status === 400) {
-        errorMessage = t("contact.errors.invalidData");
-      } else if (error.status === 500) {
-        errorMessage = t("contact.errors.serverError");
-      }
-
-      toast.error(errorMessage);
->>>>>>> 61f1bcb6b7330f77424ffd66e35206d052f4390e
     } finally {
       setIsSubmitting(false);
     }
