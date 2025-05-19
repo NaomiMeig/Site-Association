@@ -4,6 +4,6 @@ body {
   font-family: 'Arial', sans-serif; /* Par défaut pour LTR */
 }
 
-body[dir='rtl'] {
+body {
   font-family: 'Noto Sans Arabic', sans-serif; /* Police pour RTL */
 }

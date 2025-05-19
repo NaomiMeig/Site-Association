@@ -24,8 +24,6 @@ i18n
 // Fonction pour ajuster la direction et la police selon la langue
 const setDirectionAndFont = (lang) => {
   if (lang === 'ar') {
-    // Appliquer la direction RTL et la police arabe
-    document.body.style.direction = 'rtl';
     document.body.style.fontFamily = 'Noto Sans Arabic, sans-serif'; // Exemple de police arabe
   } else {
     // Appliquer LTR pour les autres langues
