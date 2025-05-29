@@ -5,5 +5,6 @@ body {
 /* } */
 
 /* body[dir='rtl'] {
+body {
   font-family: 'Noto Sans Arabic', sans-serif; /* Police pour RTL */
 /* }  */
