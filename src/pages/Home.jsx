@@ -112,12 +112,12 @@ export default function Home() {
        <div><Arrierre events={events}/></div>
        <Stats/> <br />
         <div> <Element2 /></div>  
-<br /><br /><br /><br />
+
         
         <div className="w-full">
           <Partenaire />
         </div>
-        <br /><br /><br /><br />
+
         <div className="bg-gray-400"><Contact/></div>
         <div className="bg-gradient-to-b from-cyan-300 to-blue-900 w-full">
         <Footer/>

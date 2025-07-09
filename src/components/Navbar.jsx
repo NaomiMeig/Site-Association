@@ -59,8 +59,8 @@ export default function Navbar() {
             hover:border-cyan-300 transition-colors duration-700 pb-10">{t('navbar.events')}</Link>
           <Link to="/ActionsRealisees" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
             hover:border-cyan-300 transition-colors duration-700 pb-10">{t('navbar.actions')}</Link>
-          <Link to="/Equipe" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
-            hover:border-cyan-300 transition-colors duration-700 pb-10">{t('navbar.team')}</Link>
+          {/* <Link to="/Equipe" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
+            hover:border-cyan-300 transition-colors duration-700 pb-10">{t('navbar.team')}</Link> */}
           <Link to="/contact" className="block text-gray-700 hover:text-cyan-300 border-b-2 border-transparent 
             hover:border-cyan-300 transition-colors duration-700 pb-10">{t('navbar.contact')}</Link>
         </div>
